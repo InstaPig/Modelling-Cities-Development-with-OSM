@@ -6,3 +6,4 @@ This repository illustrate the methods for extracting features from OSM database
 ## Data Processing
 Here are the steps to be followed to do the feature extraction from OpenStreetMap:
 ### Data Extraction.ipynb 
+### Edit History Classification.ipynb
