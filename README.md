@@ -5,8 +5,8 @@ This repository illustrate the methods for extracting features from OSM database
 1. [Data Processing](#data_processing)
     1. [Data Extraction](#extract)
     2. [Edit History Classification](#classification)
-3. [Exploratory Data Analysis](#EDA)
-4. [Another paragraph](#paragraph2)
+2. [Exploratory Data Analysis](#EDA)
+3. [Statistical Modelling](#statmod)
 
 
 ---
