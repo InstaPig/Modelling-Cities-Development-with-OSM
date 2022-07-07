@@ -12,6 +12,11 @@ A case study of how the cities' developments varied before and after COVID-19 is
 - Subsequently, we compared such relationships before and after the outbreak of COVID-19 pandemic and evaluate the difference between the two periods of time, as well as determine the changes across different cities.
 - Finally, we extend our idea to real-life application based on the quantified undergoing changes of the city, to predict which area are likely to engage a huge development in the future by using both Cellular Automata model and deep neural network.
 
+<p align="center">
+  <img height="300"  src="Plot/Social Economic Factors.png"> <img height="300"  src="Plot/UK_Map.png">
+</p>
+
+
 # Table of contents
 1. [Data Processing](#data_processing)
     1. [Data Extraction](#extract)
@@ -30,7 +35,11 @@ A case study of how the cities' developments varied before and after COVID-19 is
 Here are the steps to be followed to do the feature extraction from OpenStreetMap:
 
 ### Data Extraction.ipynb <a name="extract"></a>
-This workbook retrieve the edit history of POIs from the original document downloaded from OSM. The cleaned data would contain all the edits of POIs lies within the category under study.
+This workbook retrieve the edit history of POIs from the original document downloaded from OSM. The cleaned data would contain all the edits of POIs lies within the category under study. An example of extracted data can be find below:
+
+<p align="center">
+  <img width="600"  src="Plot/Tabular Data Example.png">
+</p>
 
 ### Edit History Classification.ipynb <a name="classification"></a>
 This workbook then further group the edit history into three types: 1.Updates; 2.Closure and 3.New Opening. Each of these 3 types of edits represent the different type of evolution undergoes within our city and allows us 3 different angles to analyse the development of our cities from time to time.
