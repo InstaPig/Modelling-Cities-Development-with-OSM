@@ -1,6 +1,10 @@
 # Modelling-Cities-Development-with-OSM
-![](https://forum.openstreetmap.org/viewtopic.php?id=65131)
+
 This repository illustrate the methods for extracting features from OSM database and how to use them to simulate the cities' development from time to time with OpenStreetMap Data. Incorporating the socio-economic variables that describe the cities' profile, we are able to determine the key drivers of cities' developments at different period of time. Further, we can also build models to predict its developments in the futures with the use of predictive modelling.
+
+<p align="center">
+  <img width="600"  src="Plot/openstreetmap-2.png">
+</p>
 
 A case study of how the cities' developments varied before and after COVID-19 is presented:
 - First, we have put the ubiquitous corwd-sourced data into meaningful context. In particular, we have shown how to retrieve historical data from OpenStreetMap and proposed a evaluation metric to quantify the undergoing changes within cities. 
@@ -36,8 +40,9 @@ With the above defined measures, we can count the number of edits for all types 
 ## Exploratory Data Analysis <a name="EDA"></a>
 
 ### Overall Trend <a name="EDA1"></a>
+<p align="center">
 <img src="Plot/Monthly_New_London-4.png" width="350"/> <img src="Plot/Monthly_Updates_London-3.png" width="350"/> 
-
+</p>
 The above plot shows the one-year snapshots for the monthly aggregated new business opened in London in both Pre- and Post- Pandemic periods.  
 
 - The total amount of new businesses opened in the Post-Pandemic period is greater than the one-year snapshot before the cut-off date (2020-03-31). 
@@ -46,7 +51,9 @@ The above plot shows the one-year snapshots for the monthly aggregated new busin
 In terms of the trends in these two periods, no big change has been found for new business opening. Thus, we may need to investigate further and at a more granular level in order to see what has been impacted by the COVID-19 crisis.As we are looking into the amenity POIs, which covers 10 sub-categories, we may take a closer look into how each sector has been impacted. 
 
 ### Spatial Analysis <a name="EDA2"></a>
+<p align="center">
 <img src="Plot/New_Choropleth_Map-3.png" width="350"/> <img src="Plot/Update_Choropleth_Map-3.png" width="350"/> 
+</p>
 
 **Pattern of New Business Openings:**
 
