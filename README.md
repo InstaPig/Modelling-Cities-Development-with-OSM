@@ -28,7 +28,15 @@ This workbook then further group the edit history into three types: 1.Updates; 2
 ## Exploratory Data Analysis <a name="EDA"></a>
 
 ### Overall Trend <a name="EDA1"></a>
-![](Plot/Monthly_New_London-4.png) ![](Plot/Monthly_Updates_London-3.png)
+<img src="Plot/Monthly_New_London-4.png" width="425"/> <img src="Plot/Monthly_Updates_London-3.png" width="425"/> 
+
+The above plot shows the one-year snapshots for the monthly aggregated new business opened in London in both Pre- and Post- Pandemic periods. 
+We present the figures of two periods vertically to make the same months aligned, so that the changes of monthly patterns can be compared more easily. 
+The total amount of new businesses opened in the Post-Pandemic period is greater than the one-year snapshot before the cut-off date (2020-03-31). 
+There is a rebound from June 2020 to September 2020 where the ease of lockdown happened, subsequently, the number drops back as soon as the second wave begin in autumn 2020.
+In terms of the trends in these two periods, no big change has been found for new business opening. Thus, we may need to investigate further and at a more granular level in order to see what has been impacted by the COVID-19 crisis.
+
+However, this can only provide the overview of all new businesses opened. As we are looking into the amenity POIs, which covers 10 sub-categories, we may take a closer look into how each sector has been impacted. 
 
 ### Spatial Analysis <a name="EDA2"></a>
 
