@@ -25,7 +25,8 @@ A case study of how the cities' developments varied before and after COVID-19 is
 - Multiple Regression, Auto-regression, Cellular Automata Model
 - Deep Neural Networks
 - Spatial Temporal Analysis
-- Social Computing
+- Social Computing, Social Data Science
+- Data Visualization
 
 
 # Table of contents
