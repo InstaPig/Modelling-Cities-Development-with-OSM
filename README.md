@@ -8,6 +8,8 @@ This repository illustrate the methods for extracting features from OSM database
 </p>
 
 ## Overview
+
+### Background
 A case study of how the cities' developments varied before and after COVID-19 is presented:
 - First, we have put the ubiquitous corwd-sourced data into meaningful context. In particular, we have shown how to retrieve historical data from OpenStreetMap and proposed a evaluation metric to quantify the undergoing changes within cities. 
 - With various source of information incorporated, we then examined the relationship between these changes and the different type of indicators, including geodemographic factors, temporal variable and the surrounding effect. 
@@ -17,6 +19,13 @@ A case study of how the cities' developments varied before and after COVID-19 is
 <p align="center">
   <img height="300"  src="Plot/Social Economic Factors.png"> <img height="300"  src="Plot/UK_Map_2.png">
 </p>
+
+### Technical Capabilities and Topics
+- Python, R
+- Multiple Regression, Auto-regression, Cellular Automata Model
+- Deep Neural Networks
+- Spatial Temporal Analysis
+- Social Computing
 
 
 # Table of contents
