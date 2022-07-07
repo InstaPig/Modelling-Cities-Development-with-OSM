@@ -23,10 +23,12 @@ A case study of how the cities' developments varied before and after COVID-19 is
     2. [Edit History Classification](#classification)
 2. [Exploratory Data Analysis](#EDA)
     1. [Overall Trend](#EDA1)
-    2. [Spatial Analysis](#EDA2)
+    2. [Spatial Analysis - London](#EDA2)
+    3. [Spatial Analysis - Other Regions in th UK](#EDA3)
 3. [Predictive Modelling](#statmod)
     1. [Cellular Automata Model](#mod1)
     2. [Deep Neural Network](#mod2)
+4. [Conclusion](#conclusion)
 
 
 ---
@@ -59,7 +61,7 @@ The above plot shows the one-year snapshots for the monthly aggregated new busin
 
 In terms of the trends in these two periods, no big change has been found for new business opening. Thus, we may need to investigate further and at a more granular level in order to see what has been impacted by the COVID-19 crisis.As we are looking into the amenity POIs, which covers 10 sub-categories, we may take a closer look into how each sector has been impacted. 
 
-### Spatial Analysis <a name="EDA2"></a>
+### Spatial Analysis - London <a name="EDA2"></a>
 <p align="center">
 <img src="Plot/New_Choropleth_Map-3.png" width="350"/> <img src="Plot/Update_Choropleth_Map-3.png" width="350"/> 
 </p>
@@ -87,9 +89,39 @@ For the build-up areas at the centre, the amount of updates stay approximately t
 
 However, these events were mostly canceled due to the epidemic, thus the areas has the most concentrated adjustments owing to their large foundations of business and the needs of amendments due to restrictions that applied to all wards.
 
+### Spatial Analysis - Other Regions in th UK <a name="EDA3"></a>
+
 ## Predictive Modelling <a name="statmod"></a>
 
-### Cellular Automata Model <a name="mod1"></a>
+By defining a threshold that indicates the level of activeness for each type of activities, we will then be able to build model that performs classification to find out which part of the city will actively evolve based on the spatial-temporal data we have. Here, we have presented cellular automata model and deep nueral networks as two examples.
 
+### Cellular Automata Model <a name="mod1"></a>
+The multiple linear regression is easy to implement and interpretable. However, there is a limitation of using this technique when there involves a geographic component. As by Tobler's first law of geography, areas close to one another are more similar than areas that a further away from each other. 
+
+The linear regression model is not able to capture this, substantially due to its assumptions of independence. In order to fix such problem, we need models that cater this property. In this section, we look into one candidate of such models, the **Cellular Automata model**, which is relevant to the context of this thesis. The outline is based on the method proposed in [this paper](https://dl.acm.org/doi/10.1145/2556195.2556244).
 
 ### Deep Neural Network <a name="mod2"></a>
+<p align="center">
+  <img height="300"  src="Plot/NN_EX1.png"> <img height="300"  src="Plot/NN_EX2.png">
+</p>
+
+In order to train a multilayer perceptron (MLP) we have organized the data into a set of vectors, each contains all the attributes of an area. Moreover, we have split the data at the yearly level and labels the year for each vector, so that the model can capture more information. The label would simply be the class assigned based on the annual activities. Thus, we have the training input/label ready. Again, as control, we used the records from the same time periods (2012-04-01 to 2019-03-31) for training/validating, and used the same trained neural network for the prediction tasks for both proposed time periods. Since we have 625 of wards and 7-year data, we then have 4375 training inputs in total. 
+
+For the hidden layers, we have experimented with multiple combinations of number of layers/layer sizes, and we found that a 3-layer perceptron gave the best prediction performance whilst we were fine-tuning the learning rate at the same time. Through the experiment, we have found that either too many number of layers/large layer sizes would usually lead to overfitting very quickly. Also, as we only have moderate amount of training inputs, we have set the training epochs to be 30. 
+
+Regarding the output layer, there is only one neuron that generates the predicted class label. Such outputs would therefore be directly comparable to the true labels.
+
+## Conclusion
+Overall, we have seen an obvious change in the pattern of cities' developments across all cities under study.
+
+- First, within the Greater London area, the quantified changes before and after the outbreak of pandemic are mostly determined by the geographic, economic and socio-demographic factors. By a thorough evaluation, we have seen a dramatic acceleration of developments in more deprived areas after the outbreak of COVID-19.
+- While most of the new openings were concentrated in the built-up areas before the crisis, a significant portion of this is now from those new businesses established in the suburbs.
+- With the sizable change in the city's evolution pattern, its dependencies on the past activities decreased significantly after the outbreak of pandemic. In addition, we found that the pace at which changes happen over time are more strongly determined by the influence of surrounding areas after the outbreak of pandemic.
+
+
+Moreover, we have found that the changes of evolution pattern varied significantly across different locations in the UK. 
+
+- In particular, instead of seeing an obvious expansion of developments in the areas surrounding the built-up ones, we saw a shift of concentration into the northwest from its middle part within West Midlands areas. The pace of developments in its middle (Birmingham) have slowed down significantly after the outbreak of pandemic. On the other hand, the variation of pattern in Greater Manchester is similar to that of Greater London, but much milder. The overall acceleration in development pace is significant in London but only moderate for Greater Manchester.
+- For these places, we also attempted to determine whether the quantified changes could be explained by associated attributes in both periods. A dramatic decrease in these attributes' abilities of explaining the undergoing changes were found in Greater Manchester and West Midlands, while it remained stable in the Greater London area. These places with very different culture, history and demography have encountered impacts at different level of severity.
+
+Finally, we extend our idea to predict which area are likely to engage a big evolution in the future. In particular, we have evaluated the performance of both Cellular Automata model and neural network. With limited number of associated attributes, the deep neural network encountered overfitting problem easily, where small true positive rate and perfect true negative rate were returned. On the other hand, the Cellular Automata model gave moderate results in terms of both the true positive and true negative rates, where stepwise regression were used for variable selection. Overall, the Cellular Automata would be a more reliable choice if one would like solve the above specified prediction task in order to make future planning.
