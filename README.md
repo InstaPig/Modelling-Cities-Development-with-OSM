@@ -1,6 +1,6 @@
 # Modelling-Cities-Development-with-OSM
 
-This repository illustrate the methods for extracting features from OSM database and how to use them to simulate the cities' development from time to time with OpenStreetMap Data. Incorporating the socio-economic variables that describe the cities' profile, we are able to determine the key drivers of cities' developments at different period of time. Further, we can also build models to predict its developments in the futures with the use of predictive modelling.
+This repository illustrate the methods for extracting features from OSM database and how to use them to simulate the cities' development from time to time with OpenStreetMap Data. Incorporating the socio-economic variables that describe the cities' profile, we are able to determine the key drivers of cities' developments at different period of time. Further, we can also build models to predict its developments in the futures with the use of predictive modelling. For a high level overview, please check out [Project Summary](/Project Summary.pdf)
 
 <p align="center">
   <img width="600"  src="Plot/openstreetmap-2.png">
@@ -77,6 +77,10 @@ To some extend, this change reflects the increasing demands in various types of 
 As before lockdown, commuting is much more convenient and people live in suburbs can access those services that are perhaps only available in the built-up areas easily. 
 But now, the restrictions and social scarring have changed this, and thus brought opportunities for these services to be established locally. This also explains why we have seen a increase in the average number of new business (among all amenity types) during the post-pandemic period shown in the plot.
 
+<p align="center">
+<img src="Plot/demographic_updates.png" width="550"/> 
+</p>
+
 **Pattern of Amendments Made on Businesses:**
 
 Now, looking into the variation in measurements of updates shown by the plots, it grants us another angle to analyse the impacts of COVID on cities' evolution. 
@@ -90,6 +94,16 @@ For the build-up areas at the centre, the amount of updates stay approximately t
 However, these events were mostly canceled due to the epidemic, thus the areas has the most concentrated adjustments owing to their large foundations of business and the needs of amendments due to restrictions that applied to all wards.
 
 ### Spatial Analysis - Other Regions in th UK <a name="EDA3"></a>
+
+**Greater Manchester**
+<p align="center">
+<img src="Plot/GM.png" width="550"/>  
+</p>
+
+**West Midland**
+<p align="center">
+<img src="Plot/WM.png" width="550"/>  
+</p>
 
 ## Predictive Modelling <a name="statmod"></a>
 
