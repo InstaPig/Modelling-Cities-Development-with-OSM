@@ -132,6 +132,8 @@ The multiple linear regression is easy to implement and interpretable. However, 
 
 The linear regression model is not able to capture this, substantially due to its assumptions of independence. In order to fix such problem, we need models that cater this property. In this section, we look into one candidate of such models, the **Cellular Automata model**, which is relevant to the context of this thesis. The outline is based on the method proposed in [this paper](https://dl.acm.org/doi/10.1145/2556195.2556244).
 
+Please kindly refer to the R Scirpt folder for the code about the statistical modelling.
+
 ### Deep Neural Network <a name="mod2"></a>
 <p align="center">
   <img height="300"  src="Plot/NN_EX1.png"> <img height="300"  src="Plot/NN_EX2.png">
