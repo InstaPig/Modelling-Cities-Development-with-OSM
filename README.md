@@ -28,7 +28,7 @@ This workbook then further group the edit history into three types: 1.Updates; 2
 ## Exploratory Data Analysis <a name="EDA"></a>
 
 ### Overall Trend <a name="EDA1"></a>
-
+![](Plot/Monthly_New_London-4.png) ![](Plot/Monthly_Updates_London-3.png)
 
 ### Spatial Analysis <a name="EDA2"></a>
 
