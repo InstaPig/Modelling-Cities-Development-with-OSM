@@ -13,7 +13,7 @@ A case study of how the cities' developments varied before and after COVID-19 is
 - Finally, we extend our idea to real-life application based on the quantified undergoing changes of the city, to predict which area are likely to engage a huge development in the future by using both Cellular Automata model and deep neural network.
 
 <p align="center">
-  <img height="300"  src="Plot/Social Economic Factors.png"> <img height="300"  src="Plot/UK_Map.png">
+  <img height="300"  src="Plot/Social Economic Factors.png"> <img height="300"  src="Plot/UK_Map_2.png">
 </p>
 
 
@@ -24,7 +24,7 @@ A case study of how the cities' developments varied before and after COVID-19 is
 2. [Exploratory Data Analysis](#EDA)
     1. [Overall Trend](#EDA1)
     2. [Spatial Analysis](#EDA2)
-3. [Statistical Modelling](#statmod)
+3. [Predictive Modelling](#statmod)
     1. [Cellular Automata Model](#mod1)
     2. [Deep Neural Network](#mod2)
 
@@ -87,7 +87,7 @@ For the build-up areas at the centre, the amount of updates stay approximately t
 
 However, these events were mostly canceled due to the epidemic, thus the areas has the most concentrated adjustments owing to their large foundations of business and the needs of amendments due to restrictions that applied to all wards.
 
-## Statistical Modelling <a name="statmod"></a>
+## Predictive Modelling <a name="statmod"></a>
 
 ### Cellular Automata Model <a name="mod1"></a>
 
