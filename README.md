@@ -1,11 +1,13 @@
 # Modelling-Cities-Development-with-OSM
 
+
 This repository illustrate the methods for extracting features from OSM database and how to use them to simulate the cities' development from time to time with OpenStreetMap Data. Incorporating the socio-economic variables that describe the cities' profile, we are able to determine the key drivers of cities' developments at different period of time. Further, we can also build models to predict its developments in the futures with the use of predictive modelling. For a high level overview, please check out [Project Summary](https://github.com/InstaPig/Modelling-Cities-Development-with-OSM/blob/main/Project%20Summary.pdf).
 
 <p align="center">
   <img width="600"  src="Plot/openstreetmap-2.png">
 </p>
 
+## Overview
 A case study of how the cities' developments varied before and after COVID-19 is presented:
 - First, we have put the ubiquitous corwd-sourced data into meaningful context. In particular, we have shown how to retrieve historical data from OpenStreetMap and proposed a evaluation metric to quantify the undergoing changes within cities. 
 - With various source of information incorporated, we then examined the relationship between these changes and the different type of indicators, including geodemographic factors, temporal variable and the surrounding effect. 
@@ -91,7 +93,9 @@ For the build-up areas at the centre, the amount of updates stay approximately t
 - They have a larger base (more businesses in operation) compared to other areas. 
 - In the past, businesses within these areas may need frequent adjustments potentially due to their commercial strategy or other events that only held in the city centre such as marathon.
 
-However, these events were mostly canceled due to the epidemic, thus the areas has the most concentrated adjustments owing to their large foundations of business and the needs of amendments due to restrictions that applied to all wards.
+However, these events were mostly canceled due to the epidemic, thus the areas has the most concentrated adjustments owing to their large foundations of business and the needs of amendments due to restrictions that applied to all wards. 
+
+Incorporating with external variables, we are then able to further investigate how the relationships between these quantities and the associated city's profile have changed. The plot above shows such relationship for the amendments on business in the two different periods of time. Based on this standardized result, we can easily find that, the regression coefficients for IMD_Score shifted in the oppsite direction as it was, meaning that amount of adjustments in all businesses has expanded in more deprived areas after the outbreak of the pandemic, which uncovers the potentials of developments in these areas.
 
 ### Spatial Analysis - Other Regions in th UK <a name="EDA3"></a>
 
@@ -100,10 +104,14 @@ However, these events were mostly canceled due to the epidemic, thus the areas h
 <img src="Plot/GM.png" width="550"/>  
 </p>
 
+Within Greater Manchester, we have found a similar but milder change in the development of the city compared to that happened in Greater London. Both types of Activities become more active in suburbs in the one-year period after the outbreak of pandemic, especially for the adjustments of businesses. 
+
 **West Midland**
 <p align="center">
 <img src="Plot/WM.png" width="550"/>  
 </p>
+
+On the other hand, the changes happened in the west midland area, are slightly different from those happened within the Greater London and Greater Manchester areas. We have discovered a shift in the concentration of new business openings from the middle part (Birmingham) to its northwestern part after the outbreak of pandemic. In the other two studied cities, those areas with a high level of new openings before the pandemic maintained a significant level after the cutoff point. In short, instead of having the developments accelerated across every corner of the city, the West Midlands only had the sizable speed up in its suburbs' evolution while the pace of developments within built-up areas slowed down significantly. Regarding the adjustments of businesses (i.e. updates) within West Midlands areas, we can see an overall increase within the areas, with a significant portion been in the northwestern part, which has been quite inactive before the pandemic.
 
 ## Predictive Modelling <a name="statmod"></a>
 
