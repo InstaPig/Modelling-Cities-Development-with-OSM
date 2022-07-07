@@ -49,7 +49,10 @@ A case study of how the cities' developments varied before and after COVID-19 is
 Here are the steps to be followed to do the feature extraction from OpenStreetMap:
 
 ### Data Extraction.ipynb <a name="extract"></a>
-This workbook retrieve the edit history of POIs from the original document downloaded from OSM. The cleaned data would contain all the edits of POIs lies within the category under study. An example of extracted data can be find below:
+This workbook retrieve the edit history of POIs from the original document downloaded from OSM. 
+The cleaned data would contain all the edits of POIs lies within the interested category (in our case, we have retrieved all edits that is related to 'Amenity POIs'). 
+Each record is then stored as a row in a table. With timestamp & edit ID associated, we will then be able to deduce all the changes happened in each of the POIs.
+An example of extracted data can be find below:
 
 <p align="center">
   <img width="600"  src="Plot/Tabular Data Example.png">
@@ -58,7 +61,9 @@ This workbook retrieve the edit history of POIs from the original document downl
 ### Edit History Classification.ipynb <a name="classification"></a>
 This workbook then further group the edit history into three types: 1.Updates; 2.Closure and 3.New Opening. Each of these 3 types of edits represent the different type of evolution undergoes within our city and allows us 3 different angles to analyse the development of our cities from time to time.
 
-With the above defined measures, we can count the number of edits for all types within each part of city (e.g. at the level of Ward). This aggragated amount gives us an idea how active the evolution is going on in each part of the city. Further, with the use of other socio-economic factors, we will then be able to model its relationship with the cities' profile. So that, we will be able to determine the key drivers behind the cities' development during each period.
+As we mentioned earlier, the timestamp & edit ID are the key varibales that allow us to track how each place evovled in a specific period of time. We use the edit ID to classify the type of developments for the city, for example, a version 1 POIs would mean a 'New Opening', while if we witness the changes in store names or shop type, we recgonise that there should one 'Closure' and 'New Opening' respectively.
+
+With the above defined measures, we can set a time interval and count the number of edits for all types within each part of city (e.g. at the level of Ward). This aggragated amount gives us an idea how active the evolution is undergoing in each part of the city during the defined time period. Further, with the use of other socio-economic factors, we will then be able to model its relationship with the cities' profile. So that, we will be able to determine the key drivers behind the cities' development during each period.
 
 ## Exploratory Data Analysis <a name="EDA"></a>
 
